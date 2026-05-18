@@ -1,0 +1,65 @@
+
+<style>
+body{
+  margin:0;
+  font-family:Georgia,serif;
+  background:url("background.png") no-repeat center center fixed;
+  background-size:cover;
+}
+.overlay{
+  padding:20px;
+  text-align:center;
+}
+button,select{
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  margin:5px;
+}
+button{background:#7c4dff;color:white;}
+.shuffle-area{height:120px;position:relative;margin-top:20px;}
+.stack-card{
+  width:70px;height:105px;position:absolute;left:50%;
+  transform:translateX(-50%);
+  border-radius:8px;
+  background:url("background.png") center/cover no-repeat;
+  animation:shuffleMove 0.5s infinite alternate;
+}
+@keyframes shuffleMove{
+  from{transform:translateX(-60%);} to{transform:translateX(-40%);} }
+.ribbon{position:relative;height:280px;margin-top:20px;}
+.ribbon-card{
+  width:110px;height:170px;position:absolute;border-radius:8px;
+  background:url("background.png") center/cover no-repeat;
+  cursor:pointer;transition:0.4s;
+}
+.mat{
+  position:relative;height:600px;margin:30px auto;width:90%;max-width:520px;min-height:150px;
+  background:url("mat.png") center/cover no-repeat;
+  border-radius:20px;padding:20px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+}
+.mat-card{width:110px;height:170px;perspective:800px;}
+.card-inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:0.6s;}
+.flip .card-inner{transform:rotateY(180deg);}
+.card-front,.card-back{
+  position:absolute;width:100%;height:100%;border-radius:8px;backface-visibility:hidden;
+}
+.card-back{background:url("background.png") center/cover no-repeat;}
+.card-front{transform:rotateY(180deg);}
+.card-front img{width:100%;height:100%;}
+#result{margin-top:20px;background:white;padding:15px;border-radius:12px;}
+/* SHUFFLE */
+.shuffle-area{
+  height:120px;
+  position:relative;
+  margin-top:20px;
+}
+.stack-card{
+  width:70px;
+  height:105px;
+  position:absolute;
+  border-radius:8px;
+  background:url("background.png") center/cover no-repeat;
+  transition:all 0.4s ease;
+}
+</style>
